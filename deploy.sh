@@ -22,6 +22,10 @@ echo "Pulling changes to AWS"
 # and restart nginx
 ssh ubuntu@54.84.82.146 "cd ~/sites/caedemo; git pull origin master" &>> ../deploy.log
 
+echo "Running migrations"
+
+ssh ubuntu@54.84.82.146 "rake db:migrate_data" &>> ../deploy.log
+
 echo "Restarting nginx on AWS"
 
 ssh ubuntu@54.84.82.146 "sudo service nginx restart" &>> ../deploy.log
