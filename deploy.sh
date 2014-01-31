@@ -13,7 +13,7 @@ echo "Pushing to GitHub"
 git push origin master
 
 # wait a few seconds for 
-echo "Sleeping for 5 seconds to wait for changes to be available on GitHub
+echo "Sleeping for 5 seconds to wait for changes to be available on GitHub"
 sleep 5
 
 echo "Pulling changes to AWS"
